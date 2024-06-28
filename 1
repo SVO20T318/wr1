@@ -1,0 +1,9 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+driver = webdriver.Chrome('/path/to/chromedriver')
+driver.get("https://ya.ru")
+search_box = driver.find_element_by_name('text')
+search_box.send_keys("Hello world")
+search_button = driver.find_element_by_css_selector('button[type="submit"]')
+search_button.click()
+driver.quit()
